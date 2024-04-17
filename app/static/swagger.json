@@ -1,0 +1,54 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "My application Swagger for DevOps Exam",
+    "description": "This is an example swagger for the application made for the Galicia challenge",
+    "contact": {
+      "email": "martingustavolopez@gmail.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://a0a4fd8ccc37b4f2eabcbcecdb1a35d3-1628890324.us-east-1.elb.amazonaws.com:8080"
+    }
+  ],
+  "paths": {
+    "/healthcheck": {
+      "get": {
+        "tags": [
+          "Application"
+        ],
+        "description": "Checks if the application is healthy",
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string",
+                      "example": "healthy"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string",
+                  "example": "Internal server error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

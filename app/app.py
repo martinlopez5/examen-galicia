@@ -6,8 +6,8 @@ app = Flask(__name__)
 api = Api(app)
 
 # Swagger configuration
-SWAGGER_URL = '/swagger'
-API_URL = '/swagger.yaml'  # Location of our swagger.json file
+SWAGGER_URL = "/swagger"
+API_URL = "/static/swagger.json"  # Location of our swagger file
 SWAGGER_BLUEPRINT = get_swaggerui_blueprint(
     SWAGGER_URL,
     API_URL,
@@ -26,7 +26,7 @@ class HealthCheck(Resource):
         """
         return {'Message': 'Healthy'}
 
-api.add_resource(HealthCheck, '/')
+api.add_resource(HealthCheck, '/healthcheck')
 
 
 if __name__ == '__main__':
