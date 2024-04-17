@@ -69,7 +69,7 @@ pipeline {
                         git config user.name 'martinlopez5'
                         git add manifest/Deployment.yaml
                         git commit -m 'Update image tag to ${lastTag} '
-                        git remote set-url origin https://\${GITHUB_TOKEN}@github.com/martinlopez5/examen-devops-2024.git
+                        git remote set-url origin https://\${GITHUB_TOKEN}github.com/martinlopez5/examen-galicia.git
                         git push origin main
                         """
                     }
