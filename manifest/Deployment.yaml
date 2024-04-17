@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-api
-        image: margus23/api-test-exam:1.0.3
+        image: margus23/api-test-exam:1.0.4
         resources:
           limits:
             memory: "128Mi"
