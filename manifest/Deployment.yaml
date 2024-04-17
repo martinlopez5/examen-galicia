@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: my-api
 spec:
-  replicas: 3  #Definimos el número de réplicas
+  replicas: 2  #Definimos el número de réplicas
   selector:
     matchLabels:
       app: my-api
