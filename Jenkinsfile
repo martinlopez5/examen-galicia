@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKERHUB_CREDENTIALS_ID = 'dockerhub-credentials-id'
         repoDockerHub = 'margus23'
-        nameContainer = 'my-api-test-galicia'
+        nameContainer = 'api-test-exam'
         GIT_CREDENTIALS_ID = 'git-credentials-id'
         GITHUB_TOKEN = credentials('github-token')
     }
@@ -79,12 +79,9 @@ pipeline {
 
         stage('Limpiar Workspace') {
             steps {
-                script {
-                    // Elimina el directorio de trabajo para limpiar el espacio después de la ejecución
-                    sh "rm -rf ${WORKSPACE}/*"
+                cleanWs()
+            }
         }
-    }
-}
 
         stage('Docker logout'){
             steps{
@@ -93,13 +90,3 @@ pipeline {
         }
     }
 }
-
-
-//TEST webhook action
-//TEST 2 webhook action
-// TEST 3 WEBHOOK - action
-//TEST 4 webhook
-//TEST webhook action
-//TEST 2 webhook action
-// TEST 3 WEBHOOK - action
-//TEST 4 webhookadasdsa

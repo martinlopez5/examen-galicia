@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: my-api
-        image: margus23/my-api-test-galicia:3.0.0
+        image: <PATCH_ME>
         resources:
           limits:
             memory: "128Mi"
