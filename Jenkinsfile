@@ -13,7 +13,7 @@ pipeline {
         stage('Clonar Repositorio') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/martinlopez5/examen-devops-2024.git',
+                    url: 'https://github.com/martinlopez5/examen-galicia.git',
                     credentialsId: env.GIT_CREDENTIALS_ID
             }
         }
