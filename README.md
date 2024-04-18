@@ -156,4 +156,5 @@ Y podemos ejecutar un GET al endpoint /healthcheck.
 ## Mejoras a realizar
 - Utlizar Terraform para levantar la infraestructura en AWS.
 - Tener los manifiestos en otro repositorio.
+- Agregar TESTs en el proceso, como por ejemplo: Unit test, Security test, Hadolint.
 - Tenes las imagenes utilizadas en el README.md en un Bucket S3.
